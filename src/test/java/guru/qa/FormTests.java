@@ -33,16 +33,11 @@ public class FormTests {
         $(".react-datepicker__day--010").click();
         $("[id=subjectsInput]").setValue("smth");
         $(byText("Music")).click();
-
-      //  $("[id=uploadPicture]").uploadFromClasspath("/resources/file.png");
         $("[id=currentAddress]").setValue("smth");
         $(byText("Select State")).click();
         $(byText("NCR")).click();
         $(byText("Select City")).click();
         $(byText("Delhi")).click();
-
-//        $("[id=react-select-3-input]").click("NCR");
-//        $("[id=react-select-4-input]").click("Delhi");
         $("[id=submit]").click();
 
 
