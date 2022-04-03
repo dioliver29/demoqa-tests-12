@@ -13,6 +13,7 @@ public class FormTests {
     static void setUp() {
         Configuration.holdBrowserOpen = true;
         Configuration.baseUrl = "https://demoqa.com";
+
     }
 
 
@@ -22,14 +23,29 @@ public class FormTests {
 
         $("[id=firstName]").setValue("Ivan");
         $("[id=lastName]").setValue("Ivan Ivanov");
-        $("[id=userEmail]").setValue("Ivan Ivanov");
+        $("[id=userEmail]").setValue("Ivan@ya.ru");
         $(byText("Other")).click();
         $("[id=userNumber]").setValue("1234567891");
         $("[id=dateOfBirthInput]").setValue("10 Apr 1990");
+        $(".react-datepicker__input-container").click();
+        $(".react-datepicker__month-select").selectOption("April");
+        $(".react-datepicker__year-select").selectOption("1990");
+        $(".react-datepicker__day--010").click();
         $("[id=subjectsInput]").setValue("smth");
         $(byText("Music")).click();
 
-        $("[id=uploadPicture]").uploadFromClasspath("/resources/file.png");
+      //  $("[id=uploadPicture]").uploadFromClasspath("/resources/file.png");
+        $("[id=currentAddress]").setValue("smth");
+        $(byText("Select State")).click();
+        $(byText("NCR")).click();
+        $(byText("Select City")).click();
+        $(byText("Delhi")).click();
+
+//        $("[id=react-select-3-input]").click("NCR");
+//        $("[id=react-select-4-input]").click("Delhi");
+        $("[id=submit]").click();
+
+
 
 
     }
